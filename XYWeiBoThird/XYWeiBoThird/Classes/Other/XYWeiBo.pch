@@ -1,0 +1,49 @@
+//
+//  XYWeiBo.pch
+//  XYWeiBoThird
+//
+//  Created by 李小亚 on 16/4/24.
+//  Copyright © 2016年 李小亚. All rights reserved.
+//
+
+#ifndef XYWeiBo_pch
+#define XYWeiBo_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIImage+XY.h"
+#import "UIView+AdjustFrame.h"
+#import "MJExtension.h"
+
+#define  XYKeyWindow [UIApplication sharedApplication].keyWindow
+#define XYScreenWidth [UIScreen mainScreen].bounds.size.width
+#define XYScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define XYStatusCellMargin   10
+#define XYStatusCellNameFont [UIFont systemFontOfSize:11]
+#define XYStatusCellTimeFont [UIFont systemFontOfSize:9]
+#define XYStatusCellTextFont [UIFont systemFontOfSize:13]
+
+#define XYSelectedIndex @"selectedIndex"
+
+
+
+#define XYClient_id @"2539724958"
+#define XYRedirect_uri @"https://www.baidu.com"
+#define XYApp_Secret @"3dbd2af1cf49de9ba7af94679755ecfe"
+
+
+
+#ifdef DEBUG//调试
+
+//#define XYLog(...) NSLog(__VA_ARGS__)
+#define XYLog(...) NSLog(@"%s\n %@\n\n", __func__, [NSString stringWithFormat:__VA_ARGS__])
+
+#else//发布
+
+#define XYLog(...)
+
+#endif
+
+#endif /* XYWeiBo_pch */
